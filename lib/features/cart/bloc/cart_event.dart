@@ -4,5 +4,9 @@ part of 'cart_bloc.dart';
 sealed class CartEvent {}
 
 class CartInitialEvent extends CartEvent {}
-class CartRemoveFruitEvent extends CartEvent {}
 
+class CartRemoveFruitEvent extends CartEvent {
+  final FruitModel removeFruit;
+
+  CartRemoveFruitEvent({required this.removeFruit});
+}
